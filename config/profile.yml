@@ -10,7 +10,7 @@ USER:
   role: "Senior Software Engineer"
   name: "Govardhan Selvaraj"
   username: "govardhan26" # <-- This needs to be the same as your GitHub username
-  avatar: "config/assets/avatars/my-avatar.png"
+  avatar: "config/assets/avatars/IMG_3059.png"
 
 INFO:
   - label: "Email"
