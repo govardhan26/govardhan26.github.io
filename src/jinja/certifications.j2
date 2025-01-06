@@ -1,9 +1,9 @@
 <!-- certifications.j2 -->
-<article class="Certifications" data-page="Certifications">
+<article class="certifications" data-page="certifications">
   <header>
     <h2 class="h2 article-title">{{ certifications.HEADER.label }}</h2>
   </header>
-  <section class="certifications">
+  <section class="certifications-list">
     <ul class="filter-list">
       <li class="filter-item">
         <button class="active" data-filter-btn>All</button>
@@ -15,7 +15,6 @@
       </li>
       {% endfor %}
     </ul>
-
     <div class="filter-select-box">
       <button class="filter-select" data-select>
         <div class="select-value" data-select-value>Select category</div>
@@ -34,19 +33,18 @@
         {% endfor %}
       </ul>
     </div>
-
-    <ul class="project-list">
+    <ul class="certification-list">
       {% for item in certifications.CERTIFICATION %}
-      <li class="project-item active" data-filter-item data-category="{{ item.category | lower }}">
+      <li class="certification-item active" data-filter-item data-category="{{ item.category | lower }}">
         <a href="{{ item.url }}" target="_blank">
-          <figure class="project-img">
-            <div class="project-item-icon-box">
+          <figure class="certification-img">
+            <div class="certification-item-icon-box">
               <ion-icon name="eye-outline"></ion-icon>
             </div>
             <img src="{{ item.image }}" alt="{{ item.title }}" loading="lazy">
           </figure>
-          <h3 class="project-title">{{ item.title }}</h3>
-          <p class="project-category">{{ item.category }}</p>
+          <h3 class="certification-title">{{ item.title }}</h3>
+          <p class="certification-category">{{ item.category }}</p>
         </a>
       </li>
       {% endfor %}
