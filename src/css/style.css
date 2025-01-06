@@ -2159,7 +2159,7 @@ textarea.form-input::-webkit-resizer {
 /*-----------------------------------*\
   #CERTIFICATIONS
 \*-----------------------------------*/
-
+/* 
 .filter-list {
   display: none;
 }
@@ -2221,7 +2221,7 @@ textarea.form-input::-webkit-resizer {
 
 .select-item button:hover {
   --eerie-black-2: hsl(240, 2%, 20%);
-}
+} */
 
 .certification-list {
   display: grid;
