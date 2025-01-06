@@ -17,7 +17,7 @@
       {% for item in resume.EDUCATION["items"] | reverse %}
       <li class="timeline-item">
         <h4 class="h4 timeline-item-title">{{item.institution}}</h4>
-        <h4 class="h4 timeline-item-title">{{item.degree}}</h4>
+        <span>{{item.degree}}</span>
         <span>{{item.period}}</span>
         <p class="timeline-text">
           {{item.description}}
