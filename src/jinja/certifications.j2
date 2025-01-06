@@ -3,12 +3,12 @@
   <header>
     <h2 class="h2 article-title">{{certifications.HEADER.label}}</h2>
   </header>
-  <section class="certification">
+  <section class="certifications">
     <ul class="filter-list">
       <li class="filter-item">
         <button class="active" data-filter-btn>All</button>
       </li>
-      {% set categories = certification.Certification | map(attribute='category') | unique | list %}
+      {% set categories = certifications.Certification | map(attribute='category') | unique | list %}
       {% for category in categories %}
       <li class="filter-item">
         <button data-filter-btn>{{category}}</button>
@@ -34,7 +34,7 @@
       </ul>
     </div>
     <ul class="project-list">
-      {% for item in certification.Certification %}
+      {% for item in certifications.Certification %}
       <li class="project-item  active" data-filter-item data-category="{{item.category | lower}}">
         <a href="{{item.url}}" target="_blank">
           <figure class="project-img">
