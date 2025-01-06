@@ -7,23 +7,23 @@ HEADER:
   label: "Show Contacts"
 
 USER:
-  role: "iOS Developer"
-  name: "Richard Hendricks"
-  username: "richardhendricks" # <-- This needs to be the same as your GitHub username
+  role: "Senior Software Engineer"
+  name: "Govardhan Selvaraj"
+  username: "govardhan26" # <-- This needs to be the same as your GitHub username
   avatar: "config/assets/avatars/my-avatar.png"
 
 INFO:
   - label: "Email"
-    value: "richard@example.com"
+    value: "govardhan_selvaraj@yahoo.com"
     icon: "mail-outline"
   - label: "Phone"
-    value: "+1 (213) 352-2795"
+    value: "+91 9025817537"
     icon: "phone-portrait-outline"
   - label: "Birthday"
-    value: "June 26, 1996"
+    value: "February 26, 1998"
     icon: "calendar-outline"
   - label: "Location"
-    value: "Sacramento, California, USA"
+    value: "Bengaluru, Karnataka, India"
     icon: "location-outline"
 
 SOCIAL:
@@ -36,6 +36,6 @@ SOCIAL:
   - icon: "logo-linkedin"
     url: "https://www.linkedin.com/"
   - icon: "logo-github"
-    url: "https://github.com/ivansaul"
+    url: "https://github.com/govardhan26"
   - icon: "logo-dribbble"
     url: "https://dribbble.com/"
