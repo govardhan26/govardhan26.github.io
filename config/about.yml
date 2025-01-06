@@ -3,21 +3,21 @@ HEADER:
 
 PRESENTATION:
   description: |
-    I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media. I enjoy turning complex problems into simple, beautiful and intuitive designs.
-
-    My job is to build your website so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring across your message and identity in the most creative way. I created web design for many famous brand companies.
-
+    I am a data scientist and software engineer with a passion for harnessing the power of artificial intelligence to solve complex problems and create impactful solutions. My expertise spans building predictive models, developing scalable AI-driven applications, and transitioning legacy systems to modern architectures. With a strong foundation in Python, machine learning, and cloud technologies like Google Cloud Platform (GCP), I enjoy designing innovative tools that optimize workflows and enhance decision-making.
+    
+    What excites me most is the intersection of AI and software engineering, where I can merge creativity with technical excellence. Whether it’s crafting efficient algorithms, designing intelligent diagnostic tools, or implementing robust software systems, I am driven by a desire to push technological boundaries and deliver meaningful outcomes. Currently based in Bangalore, I am always eager to collaborate on projects that challenge conventional thinking and bring transformative ideas to life.
+    
 DOING:
   enabled: true
   label: "What I'm doing"
   items:
-    - title: "Mobile Apps"
-      icon: "config/assets/icons/mobile.svg"
-      description: "Professional development of applications for iOS and Android."
+    - title: "Generative AI"
+      icon: "config/assets/icons/ai.svg"
+      description: "Professional development of Gen AI applications"
     - title: "Scripting"
       icon: "config/assets/icons/code.svg"
       description: "Automation and task scripting using Python to enhance efficiency and productivity."
-    - title: "UI/UX Designing"
+    - title: "Machine Learning"
       icon: "config/assets/icons/compass.svg"
       description: "Intuitive and visually appealing user interfaces and user experiences."
     - title: "Web Development"
