@@ -1,7 +1,7 @@
 HEADER:
   label: "Certifications"
 
-Certification:
+CERTIFICATION:
   - title: "Python"
     category: "Programming"
     image: "https://i.imgur.com/ANDVQ4o.png"
