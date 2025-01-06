@@ -27,16 +27,12 @@ INFO:
     icon: "location-outline"
 
 SOCIAL:
-  - icon: "logo-facebook"
-    url: "https://facebook.com/"
-  - icon: "logo-twitter"
-    url: "https://twitter.com/"
-  - icon: "logo-instagram"
-    url: "https://instagram.com/"
   - icon: "logo-linkedin"
     url: "https://www.linkedin.com/in/govardhan-selvaraj"
   - icon: "logo-github"
     url: "https://github.com/govardhan26"
-  - icon: "logo-dribbble"
-    url: "https://dribbble.com/"
+  - icon: "code-outline"
+    url: "https://www.hackerrank.com/profile/govardhan_selva1"
+  - icon: "logo-ionic"
+    url: "https://www.kaggle.com/gova26"
   
