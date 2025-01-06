@@ -1,0 +1,73 @@
+HEADER:
+  label: "Certifications"
+
+Certification:
+  - title: "Python"
+    category: "Programming"
+    image: "https://i.imgur.com/ANDVQ4o.png"
+    url: "https://www.hackerrank.com/certificates/17a8712a3ba0"
+
+  - title: "Problem Solving"
+    category: "General"
+    image: "https://imgur.com/2nNXhDN.png"
+    url: "https://www.hackerrank.com/certificates/f2a292671f5e"
+
+  - title: "SQL"
+    category: "Database"
+    image: "https://imgur.com/7110Lj1.png"
+    url: "https://www.hackerrank.com/certificates/eaa45174bf1e"
+
+  - title: "Flutter Travel News App"
+    category: "Mobile development"
+    image: "https://imgur.com/t5T5Ixa.png"
+    url: "https://github.com/ivansaul/flutter_travel_news_app#screenshots"
+
+  - title: "Codigo Facilito Downloader"
+    category: "Python Scripting"
+    image: "https://imgur.com/kyHrBGk.png"
+    url: "https://github.com/ivansaul/codigo_facilito_downloader"
+
+  - title: "Finance"
+    category: "Web development"
+    image: "config/assets/projects/project-1.jpg"
+    url: "https://github.com/ivansaul/flutter_cinemapedia_app#screenshots"
+
+  - title: "Orizon"
+    category: "Web development"
+    image: "config/assets/projects/project-2.png"
+    url: "https://github.com/ivansaul/flutter_todo_app#screenshots"
+
+  - title: "Fundo"
+    category: "Web design"
+    image: "config/assets/projects/project-3.jpg"
+    url: "https://github.com/ivansaul/flutter_cinemapedia_app#screenshots"
+
+  - title: "Brawlhalla"
+    category: "Applications"
+    image: "config/assets/projects/project-4.png"
+    url: "https://github.com/ivansaul/flutter_coffee_shop_app#screenshots"
+
+  - title: "DSM."
+    category: "Web design"
+    image: "config/assets/projects/project-5.png"
+    url: "https://github.com/ivansaul/flutter_todo_app#screenshots"
+
+  - title: "MetaSpark"
+    category: "Web design"
+    image: "config/assets/projects/project-6.png"
+    url: "https://github.com/ivansaul/flutter_todo_app#screenshots"
+
+  - title: "Summary"
+    category: "Web development"
+    image: "config/assets/projects/project-7.png"
+    url: "https://github.com/ivansaul/codigo_facilito_downloader"
+
+  - title: "Task Manager"
+    category: "Applications"
+    image: "config/assets/projects/project-8.jpg"
+    url: "https://github.com/ivansaul/flutter_coffee_shop_app#screenshots"
+
+  - title: "Arrival"
+    category: "Web development"
+    image: "config/assets/projects/project-9.png"
+    url: "https://github.com/ivansaul/flutter_cinemapedia_app#screenshots"
