@@ -4,17 +4,17 @@ HEADER:
 CERTIFICATION:
   - title: "Python"
     category: "Programming"
-    image: "https://i.imgur.com/ANDVQ4o.png"
+    image: "config/assets/projects/python_hackerrank.png"
     url: "https://www.hackerrank.com/certificates/17a8712a3ba0"
 
   - title: "Problem Solving"
     category: "General"
-    image: "https://imgur.com/2nNXhDN.png"
+    image: "config/assets/projects/problem_solving_hackerrank.png"
     url: "https://www.hackerrank.com/certificates/f2a292671f5e"
 
   - title: "SQL"
     category: "Database"
-    image: "https://imgur.com/7110Lj1.png"
+    image: "config/assets/projects/sql_hackerrank.png"
     url: "https://www.hackerrank.com/certificates/eaa45174bf1e"
 
   - title: "Flutter Travel News App"
