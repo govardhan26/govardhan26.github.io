@@ -2,72 +2,35 @@ HEADER:
   label: "Certifications"
 
 CERTIFICATION:
+  
+
+  - title: "Generative AI - Microsoft"
+    category: "Linkedin"
+    image: "config/assets/projects/linkedin_genai.jpg"
+    url: "https://www.linkedin.com/learning/certificates/9b71ffc2970b5e8fba19a6bab4dce9be52ee406f82b41cdbeef2720c1e394ff7?u=105636282"
+
+  - title: "Aha! Project Management"
+    category: "Linkedin"
+    image: "config/assets/projects/linedin_project_management.jpg"
+    url: "https://www.linkedin.com/learning/certificates/5bc89719e6514d06cdd7a9f2d950d9e2a2621a21133aa59afcfe5c8ce3c2ea14?accountId=105636282&u=105636282&success=true&authUUID=QKrTcyEnRC6sFq%2FhvuKPxA%3D%3D"
+
+  - title: "Atlassian Agile Project Management Professional"
+    category: "Linkedin"
+    image: "config/assets/projects/linkedin_atlassian.jpg"
+    url: "https://www.linkedin.com/learning/certificates/80e5f847a3a2f37a928cf0e6d98b94e293aad4575f4b7f3e4f209438a75105c4?u=105636282"
+
   - title: "Python"
-    category: "Programming"
+    category: "Hackerrank"
     image: "config/assets/projects/python_hackerrank.png"
     url: "https://www.hackerrank.com/certificates/17a8712a3ba0"
 
   - title: "Problem Solving"
-    category: "General"
+    category: "Hackerrank"
     image: "config/assets/projects/problem_solving_hackerrank.png"
     url: "https://www.hackerrank.com/certificates/f2a292671f5e"
 
   - title: "SQL"
-    category: "Database"
+    category: "Hackerrank"
     image: "config/assets/projects/sql_hackerrank.png"
     url: "https://www.hackerrank.com/certificates/eaa45174bf1e"
-
-  - title: "Flutter Travel News App"
-    category: "Mobile development"
-    image: "https://imgur.com/t5T5Ixa.png"
-    url: "https://github.com/ivansaul/flutter_travel_news_app#screenshots"
-
-  - title: "Codigo Facilito Downloader"
-    category: "Python Scripting"
-    image: "https://imgur.com/kyHrBGk.png"
-    url: "https://github.com/ivansaul/codigo_facilito_downloader"
-
-  - title: "Finance"
-    category: "Web development"
-    image: "config/assets/projects/project-1.jpg"
-    url: "https://github.com/ivansaul/flutter_cinemapedia_app#screenshots"
-
-  - title: "Orizon"
-    category: "Web development"
-    image: "config/assets/projects/project-2.png"
-    url: "https://github.com/ivansaul/flutter_todo_app#screenshots"
-
-  - title: "Fundo"
-    category: "Web design"
-    image: "config/assets/projects/project-3.jpg"
-    url: "https://github.com/ivansaul/flutter_cinemapedia_app#screenshots"
-
-  - title: "Brawlhalla"
-    category: "Applications"
-    image: "config/assets/projects/project-4.png"
-    url: "https://github.com/ivansaul/flutter_coffee_shop_app#screenshots"
-
-  - title: "DSM."
-    category: "Web design"
-    image: "config/assets/projects/project-5.png"
-    url: "https://github.com/ivansaul/flutter_todo_app#screenshots"
-
-  - title: "MetaSpark"
-    category: "Web design"
-    image: "config/assets/projects/project-6.png"
-    url: "https://github.com/ivansaul/flutter_todo_app#screenshots"
-
-  - title: "Summary"
-    category: "Web development"
-    image: "config/assets/projects/project-7.png"
-    url: "https://github.com/ivansaul/codigo_facilito_downloader"
-
-  - title: "Task Manager"
-    category: "Applications"
-    image: "config/assets/projects/project-8.jpg"
-    url: "https://github.com/ivansaul/flutter_coffee_shop_app#screenshots"
-
-  - title: "Arrival"
-    category: "Web development"
-    image: "config/assets/projects/project-9.png"
-    url: "https://github.com/ivansaul/flutter_cinemapedia_app#screenshots"
+    
