@@ -1,0 +1,26 @@
+HEADER:
+  label: "Awards"
+
+POSTS:
+  - title: "Star Award"
+    category: "Prodapt"
+    subtitle: "A look into the top design conferences happening this year, where innovation meets creativity."
+    published: "2022-02-23"
+    image: "config/assets/posts/Star_of_the_Month_Award__81265051.pdf"
+    
+
+  - title: "Star Award"
+    category: "Prodapt"
+    subtitle: "Explore the best fonts that every designer should incorporate into their toolkit for standout projects."
+    published: "2022-02-23"
+    image: "config/assets/posts/Star_of_the_Month_Award__72480261.pdf"
+    
+
+  - title: "Spotlight Award"
+    category: "Prodapt"
+    subtitle: "Stay updated with the latest design trends, tips, and tools that are shaping the industry."
+    published: "2022-02-23"
+    image: "config/assets/posts/Spotlight_Award__48042655.pdf"
+    
+
+  

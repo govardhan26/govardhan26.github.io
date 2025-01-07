@@ -1,0 +1,28 @@
+<!-- awards.j2 -->
+<article class="awards" data-page="awards">
+  <header>
+    <h2 class="h2 article-title">{{awards.HEADER.label}}</h2>
+  </header>
+  <section class="blog-posts">
+    <ul class="blog-posts-list">
+      {% for post in awards.POSTS %}
+      <li class="blog-post-item">
+        <figure class="blog-banner-box">
+            <iframe src="{{post.image}}" width="100%" height="500px"></iframe>
+        </figure>
+        <div class="blog-content">
+            <div class="blog-meta">
+            <p class="blog-category">{{post.category}}</p>
+            <span class="dot"></span>
+            <time datetime="{{post.published}}">{{post.published | format_date}}</time>
+            </div>
+            <h3 class="h3 blog-item-title">{{post.title}}</h3>
+            <p class="blog-text">
+            {{post.subtitle}}
+            </p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+</article>
