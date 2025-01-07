@@ -16,7 +16,7 @@ class Portfolio:
             "contact": "config/contact.yml",
             "navbar": "config/navbar.yml",
             "certifications": "config/certifications.yml",
-            "awards": "awards.yml"
+            "awards": "config/awards.yml"
         }
         self.env = Environment(loader=FileSystemLoader("src/jinja"))
         self.env.filters["format_date"] = self.format_date
