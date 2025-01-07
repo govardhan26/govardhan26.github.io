@@ -4,23 +4,23 @@ HEADER:
 POSTS:
   - title: "Star Award"
     category: "Prodapt"
-    subtitle: "A look into the top design conferences happening this year, where innovation meets creativity."
-    published: "2022-02-23"
-    image: "config/assets/posts/Star_of_the_Month_Award__81265051.pdf"
+    published: "2024-01-31"
+    image: "config/assets/posts/star_of_the_month_jan_2024.jpeg"
+    pdf: "config/assets/posts/Star_of_the_Month_Award__81265051.pdf"
     
 
   - title: "Star Award"
     category: "Prodapt"
-    subtitle: "Explore the best fonts that every designer should incorporate into their toolkit for standout projects."
-    published: "2022-02-23"
-    image: "config/assets/posts/Star_of_the_Month_Award__72480261.pdf"
+    published: "2024-09-25"
+    image: "config/assets/posts/star_of_the_month_sep_2024.jpeg"
+    pdf: "config/assets/posts/Star_of_the_Month_Award__72480261.pdf"
     
 
   - title: "Spotlight Award"
     category: "Prodapt"
-    subtitle: "Stay updated with the latest design trends, tips, and tools that are shaping the industry."
-    published: "2022-02-23"
-    image: "config/assets/posts/Spotlight_Award__48042655.pdf"
+    published: "2023-12-22"
+    image: "config/assets/posts/spotlight_award_dec_2023.jpeg"
+    pdf: "config/assets/posts/Spotlight_Award__48042655.pdf"
     
 
   
