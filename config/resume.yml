@@ -8,15 +8,15 @@ EDUCATION:
     - period: "2013 — 2015"
       institution: "Indian School Certificate"
       degree: "Mathematics & Biology"
-      description: "Completed coursework in computer science and digital media, with a particular focus on web development and programming. Collaborated on projects involving coding and design integration."
+      description: "In my ISC curriculum, I pursued Mathematics and Biology, gaining a strong interdisciplinary knowledge base that combined analytical reasoning with life sciences. This unique combination honed my problem-solving abilities and instilled a scientific temperament. My studies included calculus, probability, and biological systems, fostering critical thinking and a keen interest in data-driven approaches to solving complex problems. This foundation has been pivotal in my academic and professional journey."
     - period: "2015 — 2018"
       institution: "Dr.Grd College of Arts & Science, Coimbatore"
       degree: "Bachelors of Commerce in Actuarial Management"
-      description: "Studied fine arts with a focus on sculpture and advanced painting techniques. Took part in workshops and intensive studio sessions, receiving feedback from industry professionals."
+      description: "My undergraduate program in Actuarial Management equipped me with analytical and quantitative skills critical for risk assessment and decision-making. I excelled in subjects like statistics, financial mathematics, and business analytics. My achievements include earning the title of “Best Student of the Year” and “Masterstroke of the Year,” highlighting my academic excellence and leadership skills. This program laid the groundwork for my transition into data analytics and machine learning."
     - period: "2018 — 2020"
       institution: "Bharathiar University, Coimbatore"
       degree: "Masters in Data Science"
-      description: "Pursued a Bachelor of Fine Arts degree, specializing in interactive media and digital design. Graduated with a portfolio of projects blending traditional art forms with emerging technologies."
+      description: "During my postgraduate studies in Data Analytics, I developed a strong foundation in statistical analysis, machine learning, and data visualization. I undertook projects involving real-world data, including sentiment analysis, disease prediction, and IoT-based solutions. My coursework emphasized practical implementation of data science techniques, enabling me to develop classification models, analyze large datasets, and generate actionable insights. I also earned certifications in Python for Data Science, which further enhanced my technical proficiency."
 
 EXPERIENCE:
   enabled: true
@@ -24,16 +24,20 @@ EXPERIENCE:
   items:
     - period: "Dec 2019 — May 2020"
       position: "Data Science Intern"
-      description: "Data science intern at data tale"
+      company: "Data Tale Pvt Ltd, Coimbatore"
+      description: "As a Data Science Intern, I focused on comprehensive data collection and preprocessing to support advanced analytics and model development. Using tools such as Selenium WebDriver, BeautifulSoup, and APIs, I successfully extracted and curated over a decade of data from diverse sources. I performed exploratory data analysis (EDA) to uncover insights and trends, implemented data preprocessing techniques to ensure quality and consistency, and conducted feature engineering to enhance model performance. My work laid the foundation for building robust predictive models and actionable insights, showcasing my ability to handle end-to-end data workflows effectively."
     - period: "Jun 2020 — Jul 2021"
       position: "Junior Data Scientist"
-      description: "Worked on the design and development of websites for small to medium-sized businesses. Collaborated closely with developers to ensure responsive and user-friendly designs. Led the redesign of the company’s website, improving user engagement by 25%."
+      company: "Data Tale Pvt Ltd, Coimbatore"
+      description: "In my role as a Junior Data Scientist, I developed and deployed machine learning models to solve complex prediction and optimization problems. My responsibilities encompassed extensive data collection, preprocessing, and exploratory analysis to create robust datasets for model training. I utilized statistical methods and analytical tools to uncover insights and trends, delivering actionable recommendations to stakeholders. Additionally, I designed and implemented web-scraping pipelines for large-scale data acquisition and refined model performance through iterative testing and evaluation. My work contributed to the creation of innovative data-driven solutions that improved real-time decision-making and operational efficiency."
     - period: "Aug 2021 — Dec 2022"
       position: "Data Analyst"
-      description: "Led a team of designers to create visually stunning campaigns for major clients in the advertising industry. Managed the creative direction of print and digital media, ensuring consistent branding and high-quality designs. Oversaw the production of advertisements that won industry awards."
+      company: "ANB Systems Pvt Ltd, Chennai"
+      description: "As a Data Analyst, I applied advanced machine learning and data engineering techniques to automate workflows and enhance analytics capabilities. My responsibilities included designing algorithms to process and analyze structured and unstructured data, building custom APIs for seamless data integration, and developing tailored visualization tools for effective stakeholder communication. I leveraged NLP and computer vision to automate repetitive tasks, ensuring high accuracy and efficiency. By improving data pipelines and implementing robust analytics solutions, I enabled better decision-making and operational excellence for the organization."
     - period: "Dec 2022 — Present"
       position: "Senior Software Engineer"
-      description: "Direct and oversee the creative process for a range of projects, from concept to execution. Lead cross-functional teams to create innovative design solutions for branding, marketing, and digital experiences. Recently led the redesign of a global brand’s digital presence, increasing online sales by 40%."
+      company: "Prodapt Solutions Pvt Ltd, Bengaluru"
+      description: "As a Senior Software Engineer, I specialize in developing scalable AI-driven solutions and modernizing legacy systems to align with current technological standards. I lead the design and deployment of cloud-based applications, leveraging advanced machine learning and natural language processing (NLP) techniques to drive data-driven insights and operational efficiency. Collaborating with cross-functional teams, I integrate AI models into business workflows, optimize predictive analytics, and ensure the scalability and reliability of data-driven applications. My expertise includes building intelligent systems to streamline processes and extract actionable insights from complex datasets, contributing to improved organizational efficiency and customer satisfaction."
 
 LANGUAGES:
   enabled: true
