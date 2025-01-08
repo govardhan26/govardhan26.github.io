@@ -11,7 +11,7 @@ class Portfolio:
             "profile": "config/profile.yml",
             "about": "config/about.yml",
             "resume": "config/resume.yml",
-            "projects": "config/projects.yml",
+            # "projects": "config/projects.yml",
             # "blog": "config/blog.yml",
             "contact": "config/contact.yml",
             "navbar": "config/navbar.yml",

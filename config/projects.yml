@@ -2,10 +2,10 @@ HEADER:
   label: "Portfolio"
 
 PROJECTS:
-  - title: "Flutter Cinemapedia App"
-    category: "Mobile development"
+  - title: "ReelsNShorts"
+    category: "Personal Project"
     image: "https://i.imgur.com/ANDVQ4o.png"
-    url: "https://github.com/ivansaul/flutter_cinemapedia_app#screenshots"
+    url: "https://github.com/LingoScriptAi/reelsnshorts"
 
   - title: "Flutter Coffee Shop App"
     category: "Mobile development"
