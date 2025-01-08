@@ -1,7 +1,6 @@
 NAVBAR:
   - label: "About"
   - label: "Resume"
-  - label: "Portfolio"
   - label: "Certifications"
   - label: "Awards"
   - label: "Contact"
