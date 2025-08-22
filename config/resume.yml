@@ -34,10 +34,14 @@ EXPERIENCE:
       position: "Data Analyst"
       company: "ANB Systems Pvt Ltd, Chennai"
       description: "As a Data Analyst, I applied advanced machine learning and data engineering techniques to automate workflows and enhance analytics capabilities. My responsibilities included designing algorithms to process and analyze structured and unstructured data, building custom APIs for seamless data integration, and developing tailored visualization tools for effective stakeholder communication. I leveraged NLP and computer vision to automate repetitive tasks, ensuring high accuracy and efficiency. By improving data pipelines and implementing robust analytics solutions, I enabled better decision-making and operational excellence for the organization."
-    - period: "Dec 2022 — Present"
+    - period: "Dec 2022 — Jul 2025"
       position: "Senior Software Engineer"
       company: "Prodapt Solutions Pvt Ltd, Bengaluru"
       description: "As a Senior Software Engineer, I specialize in developing scalable AI-driven solutions and modernizing legacy systems to align with current technological standards. I lead the design and deployment of cloud-based applications, leveraging advanced machine learning and natural language processing (NLP) techniques to drive data-driven insights and operational efficiency. Collaborating with cross-functional teams, I integrate AI models into business workflows, optimize predictive analytics, and ensure the scalability and reliability of data-driven applications. My expertise includes building intelligent systems to streamline processes and extract actionable insights from complex datasets, contributing to improved organizational efficiency and customer satisfaction."
+    - period: "Jul 2025 — Present"
+      position: "Lead Engineer"
+      company: "Prodapt Solutions Pvt Ltd, Bengaluru"
+      description: "As a Lead Engineer, I drive the development of scalable, AI-powered solutions and lead modernization initiatives for legacy systems to meet evolving technological standards. I architect and deploy cloud-native applications, applying advanced machine learning and natural language processing (NLP) to unlock data-driven insights and enhance operational efficiency. By collaborating with cross-functional teams, I integrate intelligent models into business workflows, optimize predictive analytics, and ensure the robustness and scalability of enterprise-grade systems. My core expertise lies in building intelligent platforms that streamline processes, extract actionable insights from complex datasets, and deliver measurable improvements in organizational performance and customer experience."
 
 LANGUAGES:
   enabled: true
