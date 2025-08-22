@@ -7,7 +7,7 @@ HEADER:
   label: "Show Contacts"
 
 USER:
-  role: "Senior Software Engineer"
+  role: "Lead Engineer"
   name: "Govardhan Selvaraj"
   username: "govardhan26" # <-- This needs to be the same as your GitHub username
   avatar: "config/assets/avatars/IMG_3059.png"
