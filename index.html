@@ -10,27 +10,43 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
 /* ═══════════════════════════════
-   TOKENS
+   DESIGN TOKENS
 ═══════════════════════════════ */
-:root{
-  --accent:#7fffb2;
-  --accent2:#5be0ff;
-  --nav-w:240px;
-  --tr:.28s ease;
+:root {
+  --accent:  #f0a060;
+  --accent2: #e87b5a;
+  --nav-w:   240px;
+  --tr:      .28s ease;
 }
-[data-theme="dark"]{
-  --bg:#080810;--bg2:#0e0e18;--bg3:#15151f;
-  --border:rgba(255,255,255,.08);--border2:rgba(255,255,255,.13);
-  --text:#d8d8e8;--muted:#5a5a76;--heading:#fff;
-  --card:#0e0e18;--cardh:#13131e;
-  --chip:rgba(14,14,24,.97);--grain:.38;
+
+[data-theme="dark"] {
+  --bg:      #181410;
+  --bg2:     #201c18;
+  --bg3:     #28231e;
+  --border:  rgba(255,220,180,.07);
+  --border2: rgba(255,220,180,.13);
+  --text:    #ddd5c8;
+  --muted:   #6b5a48;
+  --heading: #f0ebe3;
+  --card:    #201c18;
+  --cardh:   #28231e;
+  --chip:    rgba(28,24,18,.97);
+  --grain:   .32;
 }
-[data-theme="light"]{
-  --bg:#f3f2ee;--bg2:#eae8e2;--bg3:#e2e0d8;
-  --border:rgba(0,0,0,.09);--border2:rgba(0,0,0,.15);
-  --text:#38384a;--muted:#888898;--heading:#0c0c18;
-  --card:#eae8e2;--cardh:#e0ddd5;
-  --chip:rgba(238,236,230,.97);--grain:.18;
+
+[data-theme="light"] {
+  --bg:      #faf7f2;
+  --bg2:     #f2ede6;
+  --bg3:     #e8e2d8;
+  --border:  rgba(0,0,0,.08);
+  --border2: rgba(0,0,0,.14);
+  --text:    #3a3020;
+  --muted:   #a09078;
+  --heading: #1a1410;
+  --card:    #f2ede6;
+  --cardh:   #e8e2d8;
+  --chip:    rgba(248,244,238,.97);
+  --grain:   .15;
 }
 
 /* ═══════════════════════════════
@@ -47,7 +63,6 @@ body{
 img{display:block;max-width:100%;}
 a{color:inherit;text-decoration:none;}
 button{cursor:pointer;border:none;outline:none;background:none;}
-/* grain */
 body::after{
   content:'';position:fixed;inset:0;pointer-events:none;z-index:9000;opacity:var(--grain);
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.88' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
@@ -62,8 +77,8 @@ body::after{
   border-right:1px solid var(--border);z-index:500;
   transition:transform .3s ease,background var(--tr),border-color var(--tr);
 }
-[data-theme="dark"] .sidenav{background:rgba(8,8,16,.95);backdrop-filter:blur(20px);}
-[data-theme="light"] .sidenav{background:rgba(243,242,238,.96);backdrop-filter:blur(20px);}
+[data-theme="dark"] .sidenav{background:rgba(24,20,16,.95);backdrop-filter:blur(20px);}
+[data-theme="light"] .sidenav{background:rgba(250,247,242,.96);backdrop-filter:blur(20px);}
 
 .nav-mono{font-family:'Syne',sans-serif;font-weight:800;font-size:22px;color:var(--heading);letter-spacing:-.01em;margin-bottom:3px;transition:color var(--tr);}
 .nav-mono span{color:var(--accent);}
@@ -81,7 +96,6 @@ body::after{
 
 .nav-foot{margin-top:auto;display:flex;flex-direction:column;gap:16px;}
 
-/* theme toggle */
 .theme-row{display:flex;align-items:center;gap:10px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
 .tog-track{
   width:36px;height:20px;border-radius:10px;
@@ -96,7 +110,11 @@ body::after{
 [data-theme="light"] .tog-thumb{transform:translateX(16px);background:#fff;}
 
 .nav-status{display:flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;color:var(--muted);}
-.sdot{width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent);flex-shrink:0;animation:blink 2.5s ease-in-out infinite;}
+.sdot{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--accent);box-shadow:0 0 8px rgba(240,160,96,.6);
+  flex-shrink:0;animation:blink 2.5s ease-in-out infinite;
+}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.18}}
 
 .nav-soc{display:flex;gap:14px;}
@@ -111,12 +129,11 @@ body::after{
   height:58px;padding:0 18px;align-items:center;justify-content:space-between;
   border-bottom:1px solid var(--border);transition:background var(--tr);
 }
-[data-theme="dark"] .mob-header{background:rgba(8,8,16,.96);backdrop-filter:blur(16px);}
-[data-theme="light"] .mob-header{background:rgba(243,242,238,.96);backdrop-filter:blur(16px);}
+[data-theme="dark"] .mob-header{background:rgba(24,20,16,.96);backdrop-filter:blur(16px);}
+[data-theme="light"] .mob-header{background:rgba(250,247,242,.96);backdrop-filter:blur(16px);}
 
 .mob-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:18px;color:var(--heading);transition:color var(--tr);}
 .mob-logo span{color:var(--accent);}
-
 .mob-r{display:flex;align-items:center;gap:10px;}
 .mob-thm{
   width:34px;height:34px;border-radius:50%;border:1px solid var(--border2);
@@ -168,16 +185,18 @@ body::after{
   align-items:center;gap:56px;padding:0 72px;
   border-top:none;overflow:hidden;
 }
-#hero::before{
+
+[data-theme="dark"] #hero::before{
   content:'';position:absolute;inset:0;pointer-events:none;
   background:
-    radial-gradient(ellipse 55% 60% at 82% 50%,rgba(127,255,178,.05) 0%,transparent 62%),
-    radial-gradient(ellipse 38% 44% at 10% 72%,rgba(91,224,255,.04) 0%,transparent 55%);
+    radial-gradient(ellipse 55% 60% at 82% 50%,rgba(240,160,96,.05) 0%,transparent 62%),
+    radial-gradient(ellipse 38% 44% at 10% 72%,rgba(232,123,90,.04) 0%,transparent 55%);
 }
 [data-theme="light"] #hero::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
   background:
-    radial-gradient(ellipse 55% 60% at 82% 50%,rgba(127,255,178,.12) 0%,transparent 62%),
-    radial-gradient(ellipse 38% 44% at 10% 72%,rgba(91,224,255,.09) 0%,transparent 55%);
+    radial-gradient(ellipse 55% 60% at 82% 50%,rgba(240,160,96,.10) 0%,transparent 62%),
+    radial-gradient(ellipse 38% 44% at 10% 72%,rgba(232,123,90,.08) 0%,transparent 55%);
 }
 #hero::after{
   content:'';position:absolute;inset:0;pointer-events:none;
@@ -187,16 +206,15 @@ body::after{
 }
 
 .hero-c{position:relative;z-index:1;}
-
 .hero-badge{
   display:inline-flex;align-items:center;gap:8px;
   font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--accent);background:rgba(127,255,178,.07);
-  border:1px solid rgba(127,255,178,.2);
+  color:var(--accent);background:rgba(240,160,96,.08);
+  border:1px solid rgba(240,160,96,.22);
   padding:7px 16px;margin-bottom:32px;
   animation:fadeUp .5s ease .1s both;
 }
-[data-theme="light"] .hero-badge{background:rgba(127,255,178,.15);}
+[data-theme="light"] .hero-badge{background:rgba(240,160,96,.13);}
 .bdot{width:5px;height:5px;border-radius:50%;background:var(--accent);animation:blink 2s infinite;}
 
 .hero-name{
@@ -211,21 +229,19 @@ body::after{
 }
 
 .hero-role{font-family:'DM Mono',monospace;font-size:12px;color:var(--accent2);letter-spacing:.08em;margin-bottom:22px;animation:fadeUp .55s ease .33s both;}
-
 .hero-bio{font-size:15px;color:var(--muted);max-width:500px;line-height:1.9;margin-bottom:44px;animation:fadeUp .55s ease .46s both;}
-
 .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;animation:fadeUp .55s ease .56s both;}
 
-/* photo */
 .hero-p{position:relative;z-index:1;animation:fadeUp .6s ease .25s both;}
 .pw{position:relative;width:280px;margin:0 auto;}
-.pdec{position:absolute;width:280px;height:360px;top:12px;left:12px;border:1px solid rgba(127,255,178,.18);pointer-events:none;}
+.pdec{position:absolute;width:280px;height:360px;top:12px;left:12px;border:1px solid rgba(240,160,96,.18);pointer-events:none;}
 .pimg{
   width:280px;height:360px;object-fit:cover;object-position:top center;
   display:block;position:relative;z-index:1;
-  filter:grayscale(12%) contrast(1.06);transition:filter var(--tr);
+  filter:grayscale(12%) contrast(1.06) sepia(8%);
+  transition:filter var(--tr);
 }
-[data-theme="light"] .pimg{filter:grayscale(8%) contrast(1.02);}
+[data-theme="light"] .pimg{filter:grayscale(8%) contrast(1.02) sepia(5%);}
 .pfade{
   position:absolute;bottom:0;left:0;right:0;height:40%;
   background:linear-gradient(to top,var(--bg) 0%,transparent 100%);
@@ -250,13 +266,13 @@ body::after{
    BUTTONS
 ═══════════════════════════════ */
 .btn{display:inline-block;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:13px 26px;transition:all .22s ease;}
-.btn-solid{background:var(--accent);color:#080810;}
-.btn-solid:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(127,255,178,.25);}
+.btn-solid{background:var(--accent);color:#1a1410;}
+.btn-solid:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(240,160,96,.28);}
 .btn-outline{background:transparent;color:var(--text);border:1px solid var(--border2);}
 .btn-outline:hover{border-color:var(--accent);color:var(--accent);}
 
 /* ═══════════════════════════════
-   TILES
+   TILES — what I do
 ═══════════════════════════════ */
 .tiles{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--border);gap:1px;background:var(--border);}
 .tile{background:var(--card);padding:40px 28px;position:relative;overflow:hidden;transition:background .22s;}
@@ -264,7 +280,7 @@ body::after{
 .tile::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,var(--accent),var(--accent2));transform:scaleX(0);transform-origin:left;transition:transform .3s ease;}
 .tile:hover::before{transform:scaleX(1);}
 .tile-num{font-family:'Syne',sans-serif;font-weight:800;font-size:50px;color:var(--border);line-height:1;margin-bottom:14px;transition:color .3s;}
-.tile:hover .tile-num{color:rgba(127,255,178,.08);}
+.tile:hover .tile-num{color:rgba(240,160,96,.1);}
 .tile-ico{width:28px;height:28px;color:var(--accent);margin-bottom:13px;stroke-width:1.5;}
 .tile-title{font-family:'Syne',sans-serif;font-weight:600;font-size:15px;color:var(--heading);margin-bottom:9px;transition:color var(--tr);}
 .tile-desc{font-size:12.5px;color:var(--muted);line-height:1.8;}
@@ -278,11 +294,11 @@ body::after{
 .tech-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:28px;}
 .tech-tag{
   font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--accent2);border:1px solid rgba(91,224,255,.2);background:rgba(91,224,255,.05);
+  color:var(--accent2);border:1px solid rgba(232,123,90,.22);background:rgba(232,123,90,.06);
   padding:5px 12px;transition:all .2s;
 }
-[data-theme="light"] .tech-tag{background:rgba(91,224,255,.1);}
-.tech-tag:hover{background:rgba(91,224,255,.12);border-color:rgba(91,224,255,.4);}
+[data-theme="light"] .tech-tag{background:rgba(232,123,90,.1);}
+.tech-tag:hover{background:rgba(232,123,90,.14);border-color:rgba(232,123,90,.4);}
 
 .skills-list{display:flex;flex-direction:column;gap:19px;}
 .sk-top{display:flex;justify-content:space-between;margin-bottom:7px;}
@@ -290,10 +306,10 @@ body::after{
 .sk-pct{font-family:'DM Mono',monospace;font-size:11px;color:var(--accent);}
 .sk-track{height:2px;background:var(--border2);position:relative;}
 .sk-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));position:relative;width:0;transition:width 1.3s cubic-bezier(.22,1,.36,1);}
-.sk-fill::after{content:'';position:absolute;right:-4px;top:-4px;width:9px;height:9px;border-radius:50%;background:var(--accent2);box-shadow:0 0 10px var(--accent2);}
+.sk-fill::after{content:'';position:absolute;right:-4px;top:-4px;width:9px;height:9px;border-radius:50%;background:var(--accent2);box-shadow:0 0 10px rgba(232,123,90,.7);}
 
 /* ═══════════════════════════════
-   TIMELINE
+   EXPERIENCE TIMELINE
 ═══════════════════════════════ */
 .timeline{display:grid;grid-template-columns:160px 1fr;position:relative;}
 .timeline::before{content:'';position:absolute;left:160px;top:16px;bottom:16px;width:1px;background:var(--border);transition:background var(--tr);}
@@ -301,7 +317,7 @@ body::after{
 .tl-body{padding:32px 0 32px 40px;border-bottom:1px solid var(--border);position:relative;transition:border-color var(--tr);}
 .tl-body:last-child{border-bottom:none;}
 .tl-dot{position:absolute;left:-6px;top:40px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--border2);transition:border-color .2s,box-shadow .2s,background var(--tr);}
-.tl-body:hover .tl-dot{border-color:var(--accent);box-shadow:0 0 10px rgba(127,255,178,.35);}
+.tl-body:hover .tl-dot{border-color:var(--accent);box-shadow:0 0 10px rgba(240,160,96,.4);}
 .tl-role{font-family:'Syne',sans-serif;font-weight:600;font-size:19px;color:var(--heading);margin-bottom:4px;transition:color var(--tr);}
 .tl-co{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.09em;color:var(--accent2);margin-bottom:13px;}
 .tl-desc{font-size:13.5px;color:var(--muted);line-height:1.85;max-width:640px;}
@@ -312,7 +328,7 @@ body::after{
 .edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
 .edu-card{border:1px solid var(--border);padding:30px 26px;background:var(--card);transition:all .22s;position:relative;overflow:hidden;}
 .edu-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(to right,var(--accent),var(--accent2));transform:scaleX(0);transform-origin:left;transition:transform .3s;}
-.edu-card:hover{border-color:rgba(127,255,178,.2);transform:translateY(-3px);}
+.edu-card:hover{border-color:rgba(240,160,96,.25);transform:translateY(-3px);}
 .edu-card:hover::after{transform:scaleX(1);}
 .edu-yr{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;color:var(--muted);margin-bottom:12px;}
 .edu-deg{font-family:'Syne',sans-serif;font-weight:600;font-size:15px;color:var(--heading);margin-bottom:7px;line-height:1.3;transition:color var(--tr);}
@@ -320,15 +336,20 @@ body::after{
 .edu-desc{font-size:12.5px;color:var(--muted);line-height:1.8;}
 
 /* ═══════════════════════════════
-   CERTS
+   CERTIFICATIONS
 ═══════════════════════════════ */
 .certs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
 .cert{border:1px solid var(--border);padding:26px 22px 22px;background:var(--card);transition:all .22s;position:relative;overflow:hidden;display:block;}
-.cert::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(127,255,178,.04),transparent);opacity:0;transition:opacity .22s;}
-.cert:hover{border-color:rgba(127,255,178,.28);transform:translateY(-3px);}
+.cert::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(240,160,96,.05),transparent);opacity:0;transition:opacity .22s;}
+.cert:hover{border-color:rgba(240,160,96,.3);transform:translateY(-3px);}
 .cert:hover::before{opacity:1;}
-.cert-badge{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);background:rgba(127,255,178,.08);border:1px solid rgba(127,255,178,.18);display:inline-block;padding:4px 9px;margin-bottom:12px;}
-[data-theme="light"] .cert-badge{background:rgba(127,255,178,.15);}
+.cert-badge{
+  font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--accent);background:rgba(240,160,96,.1);
+  border:1px solid rgba(240,160,96,.2);
+  display:inline-block;padding:4px 9px;margin-bottom:12px;
+}
+[data-theme="light"] .cert-badge{background:rgba(240,160,96,.15);}
 .cert-title{font-family:'Syne',sans-serif;font-weight:600;font-size:14px;color:var(--heading);line-height:1.35;transition:color var(--tr);}
 .cert-arr{position:absolute;top:22px;right:20px;font-size:15px;color:var(--muted);transition:all .2s;}
 .cert:hover .cert-arr{color:var(--accent);transform:translate(3px,-3px);}
@@ -338,9 +359,9 @@ body::after{
 ═══════════════════════════════ */
 .awards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
 .award{border:1px solid var(--border);background:var(--card);overflow:hidden;transition:all .22s;}
-.award:hover{border-color:rgba(127,255,178,.25);transform:translateY(-4px);}
+.award:hover{border-color:rgba(240,160,96,.28);transform:translateY(-4px);}
 .award-img{width:100%;height:175px;overflow:hidden;background:var(--bg3);}
-.award-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease;}
+.award-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease;filter:sepia(8%);}
 .award:hover .award-img img{transform:scale(1.06);}
 .award-body{padding:20px 22px;}
 .award-org{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:4px;}
@@ -356,13 +377,13 @@ body::after{
 .c-row{display:flex;align-items:center;gap:13px;font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);transition:color .2s;}
 .c-row:hover{color:var(--accent);}
 .c-ico{width:38px;height:38px;border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;background:var(--card);transition:all .2s;}
-.c-row:hover .c-ico{border-color:rgba(127,255,178,.3);background:rgba(127,255,178,.06);}
+.c-row:hover .c-ico{border-color:rgba(240,160,96,.35);background:rgba(240,160,96,.07);}
 
 .cform{display:flex;flex-direction:column;gap:14px;}
 .fgroup{display:flex;flex-direction:column;gap:6px;}
 .flabel{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);}
 .finput{background:var(--card);border:1px solid var(--border2);color:var(--text);padding:12px 15px;font-family:'Lora',serif;font-size:13.5px;outline:none;transition:border-color .2s,background .2s;width:100%;}
-.finput:focus{border-color:rgba(127,255,178,.4);background:var(--cardh);}
+.finput:focus{border-color:rgba(240,160,96,.45);background:var(--cardh);}
 .finput::placeholder{color:var(--muted);}
 textarea.finput{height:110px;resize:vertical;}
 
@@ -374,7 +395,7 @@ textarea.finput{height:110px;resize:vertical;}
 .footer a:hover{opacity:.65;}
 
 /* ═══════════════════════════════
-   ANIMATIONS & REVEAL
+   REVEAL ANIMATIONS
 ═══════════════════════════════ */
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease;}
@@ -410,8 +431,7 @@ textarea.finput{height:110px;resize:vertical;}
   .sec-title{margin-bottom:32px;}
 }
 
-/* nav overlay */
-.nav-ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:499;}
+.nav-ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:499;}
 .nav-ov.show{display:block;}
 </style>
 </head>
@@ -457,18 +477,18 @@ textarea.finput{height:110px;resize:vertical;}
   </div>
 </nav>
 
-<!-- MAIN (populated by JS) -->
+<!-- MAIN -->
 <div class="main" id="main"></div>
 
-<!-- ════════════════════════════════════════════════════
-     ✏️  PORTFOLIO DATA — THE ONLY THING YOU NEED TO EDIT
-     ════════════════════════════════════════════════════
-     To update your portfolio:
-       • Add a cert? Push a new object to DATA.certifications
-       • New job?    Unshift an object to DATA.experience
-       • New award?  Push to DATA.awards
-     Then save & commit — the page rebuilds automatically.
-════════════════════════════════════════════════════ -->
+<!-- ══════════════════════════════════════════════════
+     ✏️  PORTFOLIO DATA — only edit this object
+     ══════════════════════════════════════════════════
+     • New cert?      push to DATA.certifications
+     • New job?       unshift to DATA.experience
+     • New award?     push to DATA.awards
+     • New skill?     push to DATA.skills
+     Save & commit — page rebuilds automatically.
+══════════════════════════════════════════════════ -->
 <script>
 const DATA = {
   name:     "Govardhan Selvaraj",
@@ -483,16 +503,13 @@ const DATA = {
   github:   "https://github.com/govardhan26",
   repoUrl:  "https://github.com/govardhan26/govardhan26.github.io",
 
-  /* ── stats shown on hero photo ── */
   stats: [
     { num: "5+", label: "Years Exp." },
     { num: "3×", label: "Award Winner" }
   ],
 
-  /* ── tech tags ── */
   tags: ["Python","GCP","TensorFlow","NLP","LangChain","Pandas","Jupyter","SQL","Scikit-learn","OpenAI"],
 
-  /* ── services / what I do ── */
   services: [
     {
       title: "Generative AI",
@@ -516,59 +533,56 @@ const DATA = {
     }
   ],
 
-  /* ── skills ── */
   skills: [
-    { name: "Machine Learning",           pct: 90 },
-    { name: "Python Programming",         pct: 90 },
-    { name: "Data Analysis",              pct: 90 },
-    { name: "Natural Language Processing",pct: 80 },
-    { name: "MLOps",                      pct: 80 },
-    { name: "Data Science",               pct: 80 },
-    { name: "Generative AI",              pct: 70 },
-    { name: "Image Processing",           pct: 60 },
-    { name: "Web Scraping",               pct: 100 }
+    { name: "Machine Learning",            pct: 90 },
+    { name: "Python Programming",          pct: 90 },
+    { name: "Data Analysis",               pct: 90 },
+    { name: "Natural Language Processing", pct: 80 },
+    { name: "MLOps",                       pct: 80 },
+    { name: "Data Science",                pct: 80 },
+    { name: "Generative AI",               pct: 70 },
+    { name: "Image Processing",            pct: 60 },
+    { name: "Web Scraping",                pct: 100 }
   ],
 
-  /* ── experience — add new roles at the TOP ── */
   experience: [
     {
-      role:    "Lead Engineer",
-      company: "Prodapt Solutions Pvt Ltd",
-      loc:     "Bengaluru",
-      period:  "Jul 2025 — Present",
-      desc:    "Drive development of scalable AI-powered solutions and lead modernisation initiatives for legacy systems. Architect cloud-native applications using advanced ML and NLP to deliver data-driven insights and operational efficiency across enterprise-grade systems."
+      role:   "Lead Engineer",
+      company:"Prodapt Solutions Pvt Ltd",
+      loc:    "Bengaluru",
+      period: "Jul 2025 — Present",
+      desc:   "Drive development of scalable AI-powered solutions and lead modernisation initiatives for legacy systems. Architect cloud-native applications using advanced ML and NLP to deliver data-driven insights and operational efficiency across enterprise-grade systems."
     },
     {
-      role:    "Senior Software Engineer",
-      company: "Prodapt Solutions Pvt Ltd",
-      loc:     "Bengaluru",
-      period:  "Dec 2022 — Jul 2025",
-      desc:    "Designed and deployed cloud-based AI applications leveraging advanced ML and NLP techniques. Integrated AI models into business workflows, optimised predictive analytics pipelines, and ensured scalability and reliability of data-driven systems."
+      role:   "Senior Software Engineer",
+      company:"Prodapt Solutions Pvt Ltd",
+      loc:    "Bengaluru",
+      period: "Dec 2022 — Jul 2025",
+      desc:   "Designed and deployed cloud-based AI applications leveraging advanced ML and NLP. Integrated AI models into business workflows, optimised predictive analytics pipelines, and ensured scalability and reliability of data-driven systems."
     },
     {
-      role:    "Data Analyst",
-      company: "ANB Systems Pvt Ltd",
-      loc:     "Chennai",
-      period:  "Aug 2021 — Dec 2022",
-      desc:    "Applied ML and data engineering to automate workflows. Built custom APIs for data integration and developed tailored visualisation tools. Leveraged NLP and computer vision to automate repetitive tasks with high accuracy."
+      role:   "Data Analyst",
+      company:"ANB Systems Pvt Ltd",
+      loc:    "Chennai",
+      period: "Aug 2021 — Dec 2022",
+      desc:   "Applied ML and data engineering to automate workflows. Built custom APIs for data integration and developed tailored visualisation tools. Leveraged NLP and computer vision to automate repetitive tasks with high accuracy."
     },
     {
-      role:    "Junior Data Scientist",
-      company: "Data Tale Pvt Ltd",
-      loc:     "Coimbatore",
-      period:  "Jun 2020 — Jul 2021",
-      desc:    "Developed and deployed ML models for prediction and optimisation. Designed web-scraping pipelines for large-scale data acquisition and refined model performance through iterative testing."
+      role:   "Junior Data Scientist",
+      company:"Data Tale Pvt Ltd",
+      loc:    "Coimbatore",
+      period: "Jun 2020 — Jul 2021",
+      desc:   "Developed and deployed ML models for prediction and optimisation. Designed web-scraping pipelines for large-scale data acquisition and refined model performance through iterative testing."
     },
     {
-      role:    "Data Science Intern",
-      company: "Data Tale Pvt Ltd",
-      loc:     "Coimbatore",
-      period:  "Dec 2019 — May 2020",
-      desc:    "Data collection and preprocessing using Selenium, BeautifulSoup and APIs — curating over a decade of data. Performed EDA and feature engineering to support robust predictive model development."
+      role:   "Data Science Intern",
+      company:"Data Tale Pvt Ltd",
+      loc:    "Coimbatore",
+      period: "Dec 2019 — May 2020",
+      desc:   "Data collection and preprocessing using Selenium, BeautifulSoup and APIs — curating over a decade of data. Performed EDA and feature engineering to support robust predictive model development."
     }
   ],
 
-  /* ── education ── */
   education: [
     {
       degree: "Masters in Data Science",
@@ -590,7 +604,6 @@ const DATA = {
     }
   ],
 
-  /* ── certifications — just push a new object to add one ── */
   certifications: [
     { title: "Generative AI — Microsoft",                       platform: "LinkedIn Learning", url: "https://www.linkedin.com/learning/certificates/9b71ffc2970b5e8fba19a6bab4dce9be52ee406f82b41cdbeef2720c1e394ff7?u=105636282" },
     { title: "Aha! Project Management",                         platform: "LinkedIn Learning", url: "https://www.linkedin.com/learning/certificates/5bc89719e6514d06cdd7a9f2d950d9e2a2621a21133aa59afcfe5c8ce3c2ea14?accountId=105636282&u=105636282" },
@@ -600,7 +613,6 @@ const DATA = {
     { title: "SQL",                                             platform: "HackerRank",        url: "https://www.hackerrank.com/certificates/eaa45174bf1e" }
   ],
 
-  /* ── awards — push new objects to add more ── */
   awards: [
     { name: "Star Award",      org: "Prodapt Solutions", date: "January 31, 2024",   img: "https://govardhan26.github.io/config/assets/posts/star_of_the_month_jan_2024.jpeg" },
     { name: "Star Award",      org: "Prodapt Solutions", date: "September 25, 2024", img: "https://govardhan26.github.io/config/assets/posts/star_of_the_month_sep_2024.jpeg" },
@@ -608,13 +620,13 @@ const DATA = {
   ]
 };
 
-/* ══════════════════════════════════════
+/* ══════════════════════════════
    RENDER ENGINE
-══════════════════════════════════════ */
-const ico = (path) =>
+══════════════════════════════ */
+const svg = (path) =>
   `<svg class="tile-ico" fill="none" viewBox="0 0 24 24" stroke="currentColor">${path}</svg>`;
 
-const sections = [
+document.getElementById('main').innerHTML = [
 
   /* HERO */
   `<section id="hero" class="section">
@@ -645,17 +657,17 @@ const sections = [
     <div class="eyebrow reveal">Services</div>
     <h2 class="sec-title reveal">What I Build</h2>
     <div class="tiles reveal">
-      ${DATA.services.map((s,i)=>`
+      ${DATA.services.map((s,i) => `
       <div class="tile">
         <div class="tile-num">0${i+1}</div>
-        ${ico(s.icon)}
+        ${svg(s.icon)}
         <div class="tile-title">${s.title}</div>
         <p class="tile-desc">${s.desc}</p>
       </div>`).join('')}
     </div>
   </section>`,
 
-  /* SKILLS + ABOUT */
+  /* ABOUT + SKILLS */
   `<section id="skills" class="section">
     <div class="eyebrow reveal">About me</div>
     <h2 class="sec-title reveal">The Full Picture</h2>
@@ -664,10 +676,10 @@ const sections = [
         <p>I'm a data scientist and software engineer with a <em>passion for harnessing AI</em> to solve complex problems and create impactful solutions.</p>
         <p>My expertise spans building predictive models, developing <em>scalable AI-driven applications</em>, and transitioning legacy systems to modern cloud-native architectures on GCP.</p>
         <p>What excites me most is the intersection of AI and software engineering — where creativity meets technical rigour. I push technological boundaries to deliver meaningful outcomes.</p>
-        <div class="tech-tags">${DATA.tags.map(t=>`<span class="tech-tag">${t}</span>`).join('')}</div>
+        <div class="tech-tags">${DATA.tags.map(t => `<span class="tech-tag">${t}</span>`).join('')}</div>
       </div>
       <div class="skills-list reveal">
-        ${DATA.skills.map(s=>`
+        ${DATA.skills.map(s => `
         <div>
           <div class="sk-top"><span class="sk-name">${s.name}</span><span class="sk-pct">${s.pct}%</span></div>
           <div class="sk-track"><div class="sk-fill" data-w="${s.pct}"></div></div>
@@ -681,7 +693,7 @@ const sections = [
     <div class="eyebrow reveal">Career</div>
     <h2 class="sec-title reveal">Experience</h2>
     <div class="timeline reveal">
-      ${DATA.experience.map(e=>`
+      ${DATA.experience.map(e => `
       <div class="tl-date">${e.period.replace('—','<br>—')}</div>
       <div class="tl-body">
         <div class="tl-dot"></div>
@@ -697,7 +709,7 @@ const sections = [
     <div class="eyebrow reveal">Academia</div>
     <h2 class="sec-title reveal">Education</h2>
     <div class="edu-grid reveal">
-      ${DATA.education.map(e=>`
+      ${DATA.education.map(e => `
       <div class="edu-card">
         <div class="edu-yr">${e.period}</div>
         <div class="edu-deg">${e.degree}</div>
@@ -712,7 +724,7 @@ const sections = [
     <div class="eyebrow reveal">Credentials</div>
     <h2 class="sec-title reveal">Certifications</h2>
     <div class="certs-grid reveal">
-      ${DATA.certifications.map(c=>`
+      ${DATA.certifications.map(c => `
       <a class="cert" href="${c.url}" target="_blank" rel="noopener">
         <span class="cert-arr">↗</span>
         <div class="cert-badge">${c.platform}</div>
@@ -726,7 +738,7 @@ const sections = [
     <div class="eyebrow reveal">Recognition</div>
     <h2 class="sec-title reveal">Awards</h2>
     <div class="awards-grid reveal">
-      ${DATA.awards.map(a=>`
+      ${DATA.awards.map(a => `
       <div class="award">
         <div class="award-img"><img src="${a.img}" alt="${a.name}" loading="lazy"></div>
         <div class="award-body">
@@ -770,67 +782,66 @@ const sections = [
     <span>Built with intention · Bengaluru, India</span>
     <a href="${DATA.repoUrl}" target="_blank" rel="noopener">View Source ↗</a>
   </footer>`
-];
 
-document.getElementById('main').innerHTML = sections.join('');
+].join('');
 
-/* ══════════════════════════════════════
-   INTERACTIVITY
-══════════════════════════════════════ */
+/* ══════════════════════════════
+   BEHAVIOURS
+══════════════════════════════ */
 
-/* active nav */
-const navAs   = document.querySelectorAll('.nav-links a');
-const secEls  = document.querySelectorAll('section[id]');
-new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting)
-      navAs.forEach(a => a.classList.toggle('active', a.getAttribute('href')==='#'+e.target.id));
-  });
-}, { rootMargin:'-35% 0px -60% 0px' }).observe && secEls.forEach(s =>
+/* active nav highlight */
+const navAs  = document.querySelectorAll('.nav-links a');
+const secEls = document.querySelectorAll('section[id]');
+secEls.forEach(s =>
   new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting)
-        navAs.forEach(a => a.classList.toggle('active', a.getAttribute('href')==='#'+e.target.id));
+        navAs.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
     });
-  }, { rootMargin:'-35% 0px -60% 0px' }).observe(s)
+  }, { rootMargin: '-35% 0px -60% 0px' }).observe(s)
 );
 
-/* reveal */
+/* scroll reveal */
 const ro = new IntersectionObserver(entries => {
-  entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');ro.unobserve(e.target);} });
-}, { threshold:.1 });
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); }
+  });
+}, { threshold: .1 });
 document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
-/* skill bars */
+/* skill bar animation */
 const so = new IntersectionObserver(entries => {
-  entries.forEach(e => { if(e.isIntersecting){e.target.style.width=e.target.dataset.w+'%';so.unobserve(e.target);} });
-}, { threshold:.3 });
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.style.width = e.target.dataset.w + '%'; so.unobserve(e.target); }
+  });
+}, { threshold: .3 });
 document.querySelectorAll('.sk-fill').forEach(f => so.observe(f));
 
 /* mobile nav */
-const burger   = document.getElementById('burger');
-const sidenav  = document.getElementById('sidenav');
-const navOv    = document.getElementById('navOv');
-const open  = () => { sidenav.classList.add('open'); navOv.classList.add('show'); burger.classList.add('open'); };
-const close = () => { sidenav.classList.remove('open'); navOv.classList.remove('show'); burger.classList.remove('open'); };
-burger.addEventListener('click', () => sidenav.classList.contains('open') ? close() : open());
-navOv.addEventListener('click', close);
-document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', close));
+const burger  = document.getElementById('burger');
+const sidenav = document.getElementById('sidenav');
+const navOv   = document.getElementById('navOv');
+const openNav  = () => { sidenav.classList.add('open'); navOv.classList.add('show'); burger.classList.add('open'); };
+const closeNav = () => { sidenav.classList.remove('open'); navOv.classList.remove('show'); burger.classList.remove('open'); };
+burger.addEventListener('click', () => sidenav.classList.contains('open') ? closeNav() : openNav());
+navOv.addEventListener('click', closeNav);
+document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', closeNav));
 
-/* theme */
+/* theme toggle */
 function applyTheme(t) {
   document.documentElement.setAttribute('data-theme', t);
-  const light = t==='light';
+  const light = t === 'light';
   document.getElementById('togLabel').textContent = light ? 'Light mode' : 'Dark mode';
   document.getElementById('mobThm').textContent   = light ? '🌙' : '☀️';
   localStorage.setItem('gs-theme', t);
 }
 function toggleTheme() {
-  applyTheme(document.documentElement.getAttribute('data-theme')==='dark' ? 'light' : 'dark');
+  applyTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
 }
 document.getElementById('togTrack').addEventListener('click', toggleTheme);
 document.getElementById('mobThm').addEventListener('click', toggleTheme);
 
+/* restore saved theme or use OS preference */
 const saved = localStorage.getItem('gs-theme');
 applyTheme(saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'));
 
@@ -838,10 +849,11 @@ applyTheme(saved || (window.matchMedia('(prefers-color-scheme: light)').matches 
 function doSubmit(e) {
   e.preventDefault();
   const btn = document.getElementById('subBtn');
-  btn.textContent='Message sent ✓';
-  btn.style.cssText='background:transparent;color:var(--accent);border:1px solid rgba(127,255,178,.35);align-self:flex-start;';
-  btn.disabled=true; e.target.reset();
-  setTimeout(()=>{btn.textContent='Send Message →';btn.style.cssText='';btn.disabled=false;},4000);
+  btn.textContent = 'Message sent ✓';
+  btn.style.cssText = 'background:transparent;color:var(--accent);border:1px solid rgba(240,160,96,.4);align-self:flex-start;';
+  btn.disabled = true;
+  e.target.reset();
+  setTimeout(() => { btn.textContent = 'Send Message →'; btn.style.cssText = ''; btn.disabled = false; }, 4000);
 }
 </script>
 </body>
